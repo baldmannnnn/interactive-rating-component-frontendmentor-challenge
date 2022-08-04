@@ -149,5 +149,9 @@ export const BtnControls = styled.div`
   @media only screen and (min-width: 26.875rem) {
     column-gap: 1.375rem;
     margin-right: 0.4375rem;
+
+    &:last-child {
+      margin-top: 2rem;
+    }
   }
 `
