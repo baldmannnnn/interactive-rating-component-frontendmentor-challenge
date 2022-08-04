@@ -119,6 +119,10 @@ export const BtnSubmit = styled(motion.button)`
   letter-spacing: 1.8px;
   cursor: pointer;
   grid-column: 1/-1;
+
+  @media only screen and (min-width: 26.875rem) {
+    font-size: 0.9375rem;
+  }
 `
 
 export const Image = styled.img`
