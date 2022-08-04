@@ -21,7 +21,7 @@ const CardResultContainer = () => {
         },
       }}>
       <Card.Header submitted={true}>
-        <Card.Image submitted src={Illustration} />
+        <Card.Image submitted src={Illustration} alt='illustration' />
         <Card.Wrapper>
           <Card.HeaderText submitted>
             You selected {rating} out of 5

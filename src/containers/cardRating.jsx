@@ -15,14 +15,14 @@ const CardRatingContainer = () => {
       exit='exit'>
       <Card.Header>
         <Card.RoundedWrapper>
-          <Card.Image src={IconStar} />
+          <Card.Image src={IconStar} alt='star' />
         </Card.RoundedWrapper>
         <Card.Title>How did we do?</Card.Title>
+        <Card.Text>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </Card.Text>
       </Card.Header>
-      <Card.Text>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </Card.Text>
       <Card.Form
         onSubmit={e => {
           e.preventDefault()

@@ -32,13 +32,15 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   font-size: 1.5rem;
-  margin: ${({ submitted }) => (submitted ? '0 0 10px 0' : '16px 0 0 0')};
+  margin: ${({ submitted }) =>
+    submitted ? '0 0 .625rem 0' : '1rem 0 .625rem 0'};
   color: var(--neutral-100);
   text-align: ${({ submitted }) => (submitted ? 'center' : 'left')};
 
   @media only screen and (min-width: 26.875rem) {
     font-size: 1.75rem;
-    margin: ${({ submitted }) => (submitted ? '0 0 7px 0' : '30px 0 0 0')};
+    margin: ${({ submitted }) =>
+      submitted ? '0 0 .4375rem 0' : '1.875rem 0 .625rem 0'};
   }
 `
 
@@ -111,19 +113,12 @@ export const BtnSubmit = styled(motion.button)`
   font-size: 0.875rem;
   font-weight: 700;
   font-family: inherit;
-  /* color: var(--neutral-100);
-  background-color: var(--accent); */
   border: 0;
   padding: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.8px;
   cursor: pointer;
   grid-column: 1/-1;
-
-  /* &:hover {
-    color: var(--accent);
-    background-color: var(--neutral-100);
-  } */
 `
 
 export const Image = styled.img`
@@ -132,6 +127,10 @@ export const Image = styled.img`
   border: 0;
   width: 100%;
   max-width: 100%;
+
+  @media only screen and (min-width: 26.875rem) {
+    padding: ${({ submitted }) => (!submitted ? '1rem' : '.625rem 0 1.5rem 0')};
+  }
 `
 
 export const Form = styled.form`
