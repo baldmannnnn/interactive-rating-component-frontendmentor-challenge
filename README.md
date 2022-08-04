@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/baldmannnnn/interactive-rating-component-frontendmentor-challenge)
-- Live Site URL: [Add live site URL here](https://interactive-rating-component-frontendmentor-challenge.vercel.app/)
+- Solution URL: [https://github.com/baldmannnnn/interactive-rating-component-frontendmentor-challenge]
+- Live Site URL: [https://interactive-rating-component-frontendmentor-challenge.vercel.app/]
 
 ## My process
 
