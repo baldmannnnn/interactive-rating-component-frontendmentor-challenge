@@ -4,15 +4,18 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Frontend Mentor - Interactive rating component solution](#frontend-mentor---interactive-rating-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
 ## Overview
 
@@ -45,42 +48,36 @@ Users should be able to:
 
 ### What I learned
 
-````js
-```instead of adding an active class when a button is clicked. I used a a gesture animation prop from motion called whileFocus
-```
-  whileFocus={{
-    backgroundColor: 'var(--neutral-500)',
+```js
+
+whileFocus={{
+  backgroundColor: 'var(--neutral-500)',
     color: 'var(--neutral-100)',
   }}
 
-```I also passed a function called handleResetRating on the button .
-
 ```
+
+```instead of adding an active class when a button is clicked. I used a a gesture animation prop from motion called whileFocus.
+I also passed a function called handleResetRating on the button.
+```
+
+```js
 const handleResetState = e => {
-    if (
-      e.relatedTarget?.type === 'button' ||
-      e.relatedTarget?.type === 'submit'
-    )
-      return
+  if (e.relatedTarget?.type === 'button' || e.relatedTarget?.type === 'submit')
+    return
 
-    setRating('')
-  }
-
-  <Card.Btn
-  // other props
-  onBlur={handleResetRating}>{ratings.rate}
-  </Card.Btn>
+  setRating('')
+}
 ```
 
-``` The function checks for a condition, and if it is false, setRating is fired.
+```js
+<Card.Btn onBlur={handleResetRating}>{ratings.rate}</Card.Btn>
 ```
 
-```e.relatedTarget returns the element which receive focus when blur takes effect. In my case only buttons can gain a focus, anything else returns null. Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
-```
+```The function checks for a condition, and if it is false, setRating is fired.
 
-```link for event.relatedTarget https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495
+e.relatedTarget returns the element which receive focus when blur takes effect. In my case only buttons can gain a focus, anything else returns null. Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
 ```
-
 
 ### Continued development
 
@@ -92,10 +89,10 @@ I've just noticed after uploading it to vercel that the images has to be fetched
 
 - [Framer motion tutorial series ](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i/) - This is an awesome tutorial on how to use framer motion in react from The Net Ninja. The video is a bit too old but this is really helpful especially for react beginners like me who struggles with animation.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
 - Frontend Mentor - [@baldmannnnn](https://www.frontendmentor.io/profile/baldmannnnn)
+
 ```
-````
+
+```
