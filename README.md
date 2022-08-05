@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/baldmannnnn/interactive-rating-component-frontendmentor-challenge]
-- Live Site URL: [https://interactive-rating-component-frontendmentor-challenge.vercel.app/]
+- Solution URL: https://github.com/baldmannnnn/interactive-rating-component-frontendmentor-challenge
+- Live Site URL: https://interactive-rating-component-frontendmentor-challenge.vercel.app/
 
 ## My process
 
@@ -75,8 +75,9 @@ const handleResetState = e => {
 ```
 
 ```The function checks for a condition, and if it is false, setRating is fired.
-
-e.relatedTarget returns the element which receive focus when blur takes effect. In my case only buttons can gain a focus, anything else returns null. Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
+e.relatedTarget returns the element which receive focus when blur takes effect.
+In my case only buttons can gain a focus, anything else returns null.
+Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
 ```
 
 ### Continued development
@@ -92,7 +93,3 @@ I've just noticed after uploading it to vercel that the images has to be fetched
 ## Author
 
 - Frontend Mentor - [@baldmannnnn](https://www.frontendmentor.io/profile/baldmannnnn)
-
-```
-
-```
