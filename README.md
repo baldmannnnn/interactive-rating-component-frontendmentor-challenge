@@ -74,10 +74,12 @@ const handleResetState = e => {
 <Card.Btn onBlur={handleResetRating}>{ratings.rate}</Card.Btn>
 ```
 
-```The function checks for a condition, and if it is false, setRating is fired.
+```
+The function checks for a condition, and if it is false, setRating is fired.
 e.relatedTarget returns the element which receive focus when blur takes effect.
 In my case only buttons can gain a focus, anything else returns null.
-Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
+Then I check if the type is button or submit and if the condition is false, 
+set the state to it's initial value with setRating('').
 ```
 
 ### Continued development
