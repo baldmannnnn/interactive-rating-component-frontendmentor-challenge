@@ -78,7 +78,11 @@ const handleResetState = e => {
 The function checks for a condition, and if it is false, setRating is fired.
 e.relatedTarget returns the element which receive focus when blur takes effect.
 In my case only buttons can gain a focus, anything else returns null.
+<<<<<<< HEAD
 Then I check if the type is button or submit and if the condition is false,
+=======
+Then I check if the type is button or submit and if the condition is false, 
+>>>>>>> be2c0767febc0c567680d086b5ca7f5d6e1f9487
 set the state to it's initial value with setRating('').
 ```
 
