@@ -52,6 +52,7 @@ Card.RoundedWrapper = ({ children, ...restProps }) => (
 )
 
 Card.Btn = ({ children, ...restProps }) => <Btn {...restProps}>{children}</Btn>
+
 Card.BtnSubmit = ({ children, ...restProps }) => (
   <BtnSubmit {...restProps}>{children}</BtnSubmit>
 )

@@ -6,6 +6,16 @@ import IconStar from '../assets/icon-star.svg'
 const CardRatingContainer = () => {
   const { rating, setRating, setIsSubmitted } = useRatingContext()
 
+  const handleResetRating = e => {
+    if (
+      e.relatedTarget?.type === 'button' ||
+      e.relatedTarget?.type === 'submit'
+    )
+      return
+
+    setRating('')
+  }
+
   return (
     <Card
       key='card rating'
@@ -33,7 +43,6 @@ const CardRatingContainer = () => {
         <Card.BtnControls>
           {ratingList.map(ratings => (
             <Card.Btn
-              initial={false}
               whileHover={{
                 scale: 1.05,
                 color: 'var(--neutral-100)',
@@ -48,9 +57,8 @@ const CardRatingContainer = () => {
               }}
               key={ratings.id}
               type='button'
-              onClick={() => {
-                setRating(ratings.rate)
-              }}>
+              onClick={() => setRating(ratings.rate)}
+              onBlur={handleResetRating}>
               {ratings.rate}
             </Card.Btn>
           ))}

@@ -43,6 +43,45 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 - [Framer Motion](https://www.framer.com/motion/) - Animation library for react
 
+### What I learned
+
+````js
+```instead of adding an active class when a button is clicked. I used a a gesture animation prop from motion called whileFocus
+```
+  whileFocus={{
+    backgroundColor: 'var(--neutral-500)',
+    color: 'var(--neutral-100)',
+  }}
+
+```I also passed a function called handleResetRating on the button .
+
+```
+const handleResetState = e => {
+    if (
+      e.relatedTarget?.type === 'button' ||
+      e.relatedTarget?.type === 'submit'
+    )
+      return
+
+    setRating('')
+  }
+
+  <Card.Btn
+  // other props
+  onBlur={handleResetRating}>{ratings.rate}
+  </Card.Btn>
+```
+
+``` The function checks for a condition, and if it is false, setRating is fired.
+```
+
+```e.relatedTarget returns the element which receive focus when blur takes effect. In my case only buttons can gain a focus, anything else returns null. Then I check if the type is button or submit and if the condition is false, set the state to it's initial value with setRating('').
+```
+
+```link for event.relatedTarget https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495
+```
+
+
 ### Continued development
 
 I've just noticed after uploading it to vercel that the images has to be fetched, thus it sometimes result to the images not being displayed properly. I'll try to find a way to preload the images in Vite
@@ -58,3 +97,5 @@ I've just noticed after uploading it to vercel that the images has to be fetched
 ## Author
 
 - Frontend Mentor - [@baldmannnnn](https://www.frontendmentor.io/profile/baldmannnnn)
+```
+````
